@@ -1,0 +1,230 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Fri Feb 18 17:25:14 2022
+# Process ID: 10544
+# Current directory: D:/BaiduNetdiskDownload/DA_HDMI
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent3536 D:\BaiduNetdiskDownload\DA_HDMI\DA_HDMI.xpr
+# Log file: D:/BaiduNetdiskDownload/DA_HDMI/vivado.log
+# Journal file: D:/BaiduNetdiskDownload/DA_HDMI\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/BaiduNetdiskDownload/DA_HDMI/DA_HDMI.xpr
+update_compile_order -fileset sources_1
+create_ip -name blk_mem_gen -vendor xilinx.com -library ip -version 8.4 -module_name triangle_ins -dir d:/BaiduNetdiskDownload/DA_HDMI/DA_HDMI.srcs/sources_1/ip
+set_property -dict [list CONFIG.Component_Name {triangle_ins} CONFIG.Memory_Type {Single_Port_ROM} CONFIG.Write_Width_A {8} CONFIG.Write_Depth_A {512} CONFIG.Read_Width_A {8} CONFIG.Enable_A {Always_Enabled} CONFIG.Write_Width_B {8} CONFIG.Read_Width_B {8} CONFIG.Load_Init_File {true} CONFIG.Coe_File {D:/BaiduNetdiskDownload/DA_HDMI/triangle.coe} CONFIG.Port_A_Write_Rate {0}] [get_ips triangle_ins]
+generate_target {instantiation_template} [get_files d:/BaiduNetdiskDownload/DA_HDMI/DA_HDMI.srcs/sources_1/ip/triangle_ins/triangle_ins.xci]
+generate_target all [get_files  d:/BaiduNetdiskDownload/DA_HDMI/DA_HDMI.srcs/sources_1/ip/triangle_ins/triangle_ins.xci]
+catch { config_ip_cache -export [get_ips -all triangle_ins] }
+export_ip_user_files -of_objects [get_files d:/BaiduNetdiskDownload/DA_HDMI/DA_HDMI.srcs/sources_1/ip/triangle_ins/triangle_ins.xci] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] d:/BaiduNetdiskDownload/DA_HDMI/DA_HDMI.srcs/sources_1/ip/triangle_ins/triangle_ins.xci]
+launch_runs -jobs 2 triangle_ins_synth_1
+export_simulation -of_objects [get_files d:/BaiduNetdiskDownload/DA_HDMI/DA_HDMI.srcs/sources_1/ip/triangle_ins/triangle_ins.xci] -directory D:/BaiduNetdiskDownload/DA_HDMI/DA_HDMI.ip_user_files/sim_scripts -ip_user_files_dir D:/BaiduNetdiskDownload/DA_HDMI/DA_HDMI.ip_user_files -ipstatic_source_dir D:/BaiduNetdiskDownload/DA_HDMI/DA_HDMI.ip_user_files/ipstatic -lib_map_path [list {modelsim=D:/Modelsim/vivado_lib} {questa=D:/BaiduNetdiskDownload/DA_HDMI/DA_HDMI.cache/compile_simlib/questa} {riviera=D:/BaiduNetdiskDownload/DA_HDMI/DA_HDMI.cache/compile_simlib/riviera} {activehdl=D:/BaiduNetdiskDownload/DA_HDMI/DA_HDMI.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+export_ip_user_files -of_objects  [get_files d:/BaiduNetdiskDownload/DA_HDMI/DA_HDMI.srcs/sources_1/ip/triangle_ins/triangle_ins.xci] -no_script -reset -force -quiet
+remove_files  -fileset triangle_ins d:/BaiduNetdiskDownload/DA_HDMI/DA_HDMI.srcs/sources_1/ip/triangle_ins/triangle_ins.xci
+create_ip -name blk_mem_gen -vendor xilinx.com -library ip -version 8.4 -module_name blk_mem_gen_sine -dir d:/BaiduNetdiskDownload/DA_HDMI/DA_HDMI.srcs/sources_1/ip
+set_property -dict [list CONFIG.Component_Name {blk_mem_gen_sine} CONFIG.Memory_Type {Single_Port_ROM} CONFIG.Write_Width_A {8} CONFIG.Write_Depth_A {512} CONFIG.Read_Width_A {8} CONFIG.Enable_A {Always_Enabled} CONFIG.Write_Width_B {8} CONFIG.Read_Width_B {8} CONFIG.Load_Init_File {true} CONFIG.Coe_File {D:/BaiduNetdiskDownload/DA_HDMI/sin.coe} CONFIG.Port_A_Write_Rate {0}] [get_ips blk_mem_gen_sine]
+generate_target {instantiation_template} [get_files d:/BaiduNetdiskDownload/DA_HDMI/DA_HDMI.srcs/sources_1/ip/blk_mem_gen_sine/blk_mem_gen_sine.xci]
+generate_target all [get_files  d:/BaiduNetdiskDownload/DA_HDMI/DA_HDMI.srcs/sources_1/ip/blk_mem_gen_sine/blk_mem_gen_sine.xci]
+catch { config_ip_cache -export [get_ips -all blk_mem_gen_sine] }
+export_ip_user_files -of_objects [get_files d:/BaiduNetdiskDownload/DA_HDMI/DA_HDMI.srcs/sources_1/ip/blk_mem_gen_sine/blk_mem_gen_sine.xci] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] d:/BaiduNetdiskDownload/DA_HDMI/DA_HDMI.srcs/sources_1/ip/blk_mem_gen_sine/blk_mem_gen_sine.xci]
+export_simulation -of_objects [get_files d:/BaiduNetdiskDownload/DA_HDMI/DA_HDMI.srcs/sources_1/ip/blk_mem_gen_sine/blk_mem_gen_sine.xci] -directory D:/BaiduNetdiskDownload/DA_HDMI/DA_HDMI.ip_user_files/sim_scripts -ip_user_files_dir D:/BaiduNetdiskDownload/DA_HDMI/DA_HDMI.ip_user_files -ipstatic_source_dir D:/BaiduNetdiskDownload/DA_HDMI/DA_HDMI.ip_user_files/ipstatic -lib_map_path [list {modelsim=D:/Modelsim/vivado_lib} {questa=D:/BaiduNetdiskDownload/DA_HDMI/DA_HDMI.cache/compile_simlib/questa} {riviera=D:/BaiduNetdiskDownload/DA_HDMI/DA_HDMI.cache/compile_simlib/riviera} {activehdl=D:/BaiduNetdiskDownload/DA_HDMI/DA_HDMI.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+create_ip -name blk_mem_gen -vendor xilinx.com -library ip -version 8.4 -module_name blk_mem_gen_square -dir d:/BaiduNetdiskDownload/DA_HDMI/DA_HDMI.srcs/sources_1/ip
+set_property -dict [list CONFIG.Component_Name {blk_mem_gen_square} CONFIG.Memory_Type {Single_Port_ROM} CONFIG.Write_Width_A {8} CONFIG.Write_Depth_A {512} CONFIG.Read_Width_A {8} CONFIG.Enable_A {Always_Enabled} CONFIG.Write_Width_B {8} CONFIG.Read_Width_B {8} CONFIG.Load_Init_File {true} CONFIG.Coe_File {D:/BaiduNetdiskDownload/DA_HDMI/square.coe} CONFIG.Port_A_Write_Rate {0}] [get_ips blk_mem_gen_square]
+generate_target {instantiation_template} [get_files d:/BaiduNetdiskDownload/DA_HDMI/DA_HDMI.srcs/sources_1/ip/blk_mem_gen_square/blk_mem_gen_square.xci]
+update_compile_order -fileset sources_1
+generate_target all [get_files  d:/BaiduNetdiskDownload/DA_HDMI/DA_HDMI.srcs/sources_1/ip/blk_mem_gen_square/blk_mem_gen_square.xci]
+catch { config_ip_cache -export [get_ips -all blk_mem_gen_square] }
+export_ip_user_files -of_objects [get_files d:/BaiduNetdiskDownload/DA_HDMI/DA_HDMI.srcs/sources_1/ip/blk_mem_gen_square/blk_mem_gen_square.xci] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] d:/BaiduNetdiskDownload/DA_HDMI/DA_HDMI.srcs/sources_1/ip/blk_mem_gen_square/blk_mem_gen_square.xci]
+launch_runs -jobs 2 blk_mem_gen_square_synth_1
+export_simulation -of_objects [get_files d:/BaiduNetdiskDownload/DA_HDMI/DA_HDMI.srcs/sources_1/ip/blk_mem_gen_square/blk_mem_gen_square.xci] -directory D:/BaiduNetdiskDownload/DA_HDMI/DA_HDMI.ip_user_files/sim_scripts -ip_user_files_dir D:/BaiduNetdiskDownload/DA_HDMI/DA_HDMI.ip_user_files -ipstatic_source_dir D:/BaiduNetdiskDownload/DA_HDMI/DA_HDMI.ip_user_files/ipstatic -lib_map_path [list {modelsim=D:/Modelsim/vivado_lib} {questa=D:/BaiduNetdiskDownload/DA_HDMI/DA_HDMI.cache/compile_simlib/questa} {riviera=D:/BaiduNetdiskDownload/DA_HDMI/DA_HDMI.cache/compile_simlib/riviera} {activehdl=D:/BaiduNetdiskDownload/DA_HDMI/DA_HDMI.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+create_ip -name blk_mem_gen -vendor xilinx.com -library ip -version 8.4 -module_name blk_mem_gen_triangle -dir d:/BaiduNetdiskDownload/DA_HDMI/DA_HDMI.srcs/sources_1/ip
+set_property -dict [list CONFIG.Component_Name {blk_mem_gen_triangle} CONFIG.Memory_Type {Single_Port_ROM} CONFIG.Write_Width_A {8} CONFIG.Write_Depth_A {512} CONFIG.Read_Width_A {8} CONFIG.Enable_A {Always_Enabled} CONFIG.Write_Width_B {8} CONFIG.Read_Width_B {8} CONFIG.Load_Init_File {true} CONFIG.Coe_File {D:/BaiduNetdiskDownload/DA_HDMI/triangle.coe} CONFIG.Port_A_Write_Rate {0}] [get_ips blk_mem_gen_triangle]
+generate_target {instantiation_template} [get_files d:/BaiduNetdiskDownload/DA_HDMI/DA_HDMI.srcs/sources_1/ip/blk_mem_gen_triangle/blk_mem_gen_triangle.xci]
+update_compile_order -fileset sources_1
+generate_target all [get_files  d:/BaiduNetdiskDownload/DA_HDMI/DA_HDMI.srcs/sources_1/ip/blk_mem_gen_triangle/blk_mem_gen_triangle.xci]
+catch { config_ip_cache -export [get_ips -all blk_mem_gen_triangle] }
+export_ip_user_files -of_objects [get_files d:/BaiduNetdiskDownload/DA_HDMI/DA_HDMI.srcs/sources_1/ip/blk_mem_gen_triangle/blk_mem_gen_triangle.xci] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] d:/BaiduNetdiskDownload/DA_HDMI/DA_HDMI.srcs/sources_1/ip/blk_mem_gen_triangle/blk_mem_gen_triangle.xci]
+launch_runs -jobs 2 blk_mem_gen_triangle_synth_1
+export_simulation -of_objects [get_files d:/BaiduNetdiskDownload/DA_HDMI/DA_HDMI.srcs/sources_1/ip/blk_mem_gen_triangle/blk_mem_gen_triangle.xci] -directory D:/BaiduNetdiskDownload/DA_HDMI/DA_HDMI.ip_user_files/sim_scripts -ip_user_files_dir D:/BaiduNetdiskDownload/DA_HDMI/DA_HDMI.ip_user_files -ipstatic_source_dir D:/BaiduNetdiskDownload/DA_HDMI/DA_HDMI.ip_user_files/ipstatic -lib_map_path [list {modelsim=D:/Modelsim/vivado_lib} {questa=D:/BaiduNetdiskDownload/DA_HDMI/DA_HDMI.cache/compile_simlib/questa} {riviera=D:/BaiduNetdiskDownload/DA_HDMI/DA_HDMI.cache/compile_simlib/riviera} {activehdl=D:/BaiduNetdiskDownload/DA_HDMI/DA_HDMI.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+create_ip -name blk_mem_gen -vendor xilinx.com -library ip -version 8.4 -module_name blk_mem_gen_sawtooth -dir d:/BaiduNetdiskDownload/DA_HDMI/DA_HDMI.srcs/sources_1/ip
+set_property -dict [list CONFIG.Component_Name {blk_mem_gen_sawtooth} CONFIG.Memory_Type {Single_Port_ROM} CONFIG.Write_Width_A {8} CONFIG.Write_Depth_A {512} CONFIG.Read_Width_A {8} CONFIG.Enable_A {Always_Enabled} CONFIG.Write_Width_B {8} CONFIG.Read_Width_B {8} CONFIG.Load_Init_File {true} CONFIG.Coe_File {D:/BaiduNetdiskDownload/DA_HDMI/sawtooth.coe} CONFIG.Port_A_Write_Rate {0}] [get_ips blk_mem_gen_sawtooth]
+generate_target {instantiation_template} [get_files d:/BaiduNetdiskDownload/DA_HDMI/DA_HDMI.srcs/sources_1/ip/blk_mem_gen_sawtooth/blk_mem_gen_sawtooth.xci]
+generate_target all [get_files  d:/BaiduNetdiskDownload/DA_HDMI/DA_HDMI.srcs/sources_1/ip/blk_mem_gen_sawtooth/blk_mem_gen_sawtooth.xci]
+catch { config_ip_cache -export [get_ips -all blk_mem_gen_sawtooth] }
+export_ip_user_files -of_objects [get_files d:/BaiduNetdiskDownload/DA_HDMI/DA_HDMI.srcs/sources_1/ip/blk_mem_gen_sawtooth/blk_mem_gen_sawtooth.xci] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] d:/BaiduNetdiskDownload/DA_HDMI/DA_HDMI.srcs/sources_1/ip/blk_mem_gen_sawtooth/blk_mem_gen_sawtooth.xci]
+launch_runs -jobs 2 blk_mem_gen_sawtooth_synth_1
+export_simulation -of_objects [get_files d:/BaiduNetdiskDownload/DA_HDMI/DA_HDMI.srcs/sources_1/ip/blk_mem_gen_sawtooth/blk_mem_gen_sawtooth.xci] -directory D:/BaiduNetdiskDownload/DA_HDMI/DA_HDMI.ip_user_files/sim_scripts -ip_user_files_dir D:/BaiduNetdiskDownload/DA_HDMI/DA_HDMI.ip_user_files -ipstatic_source_dir D:/BaiduNetdiskDownload/DA_HDMI/DA_HDMI.ip_user_files/ipstatic -lib_map_path [list {modelsim=D:/Modelsim/vivado_lib} {questa=D:/BaiduNetdiskDownload/DA_HDMI/DA_HDMI.cache/compile_simlib/questa} {riviera=D:/BaiduNetdiskDownload/DA_HDMI/DA_HDMI.cache/compile_simlib/riviera} {activehdl=D:/BaiduNetdiskDownload/DA_HDMI/DA_HDMI.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+wait_on_run synth_1
+open_run synth_1 -name synth_1
+place_ports key_mode L13
+set_property IOSTANDARD LVCMOS33 [get_ports [list key_mode]]
+set_property target_constrs_file D:/BaiduNetdiskDownload/DA_HDMI/DA_HDMI.srcs/constrs_1/new/cons.xdc [current_fileset -constrset]
+save_constraints -force
+launch_runs impl_1 -jobs 2
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+wait_on_run synth_1
+refresh_design
+launch_runs impl_1 -jobs 2
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
+open_hw
+connect_hw_server
+open_hw_target
+set_property PROGRAM.FILE {D:/BaiduNetdiskDownload/DA_HDMI/DA_HDMI.runs/impl_1/top.bit} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {D:/BaiduNetdiskDownload/DA_HDMI/DA_HDMI.runs/impl_1/top.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+close_hw
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+wait_on_run synth_1
+launch_runs impl_1 -jobs 2
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
+open_hw
+connect_hw_server
+open_hw_target
+set_property PROGRAM.FILE {D:/BaiduNetdiskDownload/DA_HDMI/DA_HDMI.runs/impl_1/top.bit} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {D:/BaiduNetdiskDownload/DA_HDMI/DA_HDMI.runs/impl_1/top.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+wait_on_run synth_1
+close_hw
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+wait_on_run synth_1
+refresh_design
+set_property package_pin "" [get_ports [list  ad_clk]]
+save_constraints
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+wait_on_run synth_1
+refresh_design
+place_ports adda_vcc D16
+place_ports adda_gnd E16
+set_property package_pin "" [get_ports [list  adda_rst]]
+save_constraints
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+wait_on_run synth_1
+refresh_design
+refresh_design
+place_ports adda_gnd1 E16
+place_ports adda_gnd2 F13
+place_ports {ad_data[0]} E14
+place_ports {ad_data[1]} E13
+place_ports {ad_data[2]} D15
+place_ports {ad_data[3]} D14
+place_ports {ad_data[4]} B13
+place_ports {ad_data[5]} C13
+place_ports {ad_data[6]} A14
+place_ports {ad_data[7]} A13
+place_ports ad_clk C14
+place_ports da_clk A15
+place_ports {da_data[7]} B16
+place_ports {da_data[6]} B15
+place_ports {da_data[5]} B18
+place_ports {da_data[4]} B17
+place_ports {da_data[3]} A19
+place_ports {da_data[2]} A18
+place_ports {da_data[1]} C19
+place_ports {da_data[0]} C18
+save_constraints
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+wait_on_run synth_1
+refresh_design
+set_property IOSTANDARD LVCMOS33 [get_ports [list clk]]
+refresh_design
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+wait_on_run synth_1
+refresh_design
+set_property package_pin "" [get_ports [list  {da_data[7]}]]
+place_ports adda_gnd E16
+place_ports {ad_data[0]} F14
+place_ports {ad_data[1]} F13
+place_ports {ad_data[2]} E14
+place_ports {ad_data[3]} E13
+place_ports {ad_data[4]} D15
+place_ports {ad_data[5]} D14
+place_ports {ad_data[6]} B13
+place_ports {ad_data[7]} C13
+place_ports ad_clk A13
+place_ports da_clk C14
+place_ports {da_data[7]} A16
+place_ports {da_data[6]} A15
+place_ports {da_data[5]} B16
+place_ports {da_data[4]} B15
+place_ports {da_data[3]} B18
+place_ports {da_data[2]} B17
+place_ports {da_data[1]} A19
+place_ports {da_data[0]} A18
+update_compile_order -fileset sources_1
+save_constraints
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+wait_on_run synth_1
+launch_runs impl_1 -jobs 2
+wait_on_run impl_1
+refresh_design
+set_property IOSTANDARD LVCMOS33 [get_ports [list {da_data[7]}]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list {da_data[6]}]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list {da_data[5]}]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list {da_data[4]}]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list {da_data[3]}]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list {da_data[2]}]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list {da_data[1]}]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list {da_data[0]}]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list ad_clk da_clk]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list {ad_data[7]} {ad_data[6]} {ad_data[5]} {ad_data[4]} {ad_data[3]} {ad_data[2]} {ad_data[1]} {ad_data[0]}]]
+save_constraints
+reset_run impl_1
+launch_runs impl_1 -jobs 2
+wait_on_run impl_1
+set_property IOSTANDARD LVCMOS33 [get_ports [list adda_gnd]]
+save_constraints
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+wait_on_run synth_1
+refresh_design
+launch_runs impl_1 -jobs 2
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
+open_hw
+connect_hw_server
+open_hw_target
+set_property PROGRAM.FILE {D:/BaiduNetdiskDownload/DA_HDMI/DA_HDMI.runs/impl_1/top.bit} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {D:/BaiduNetdiskDownload/DA_HDMI/DA_HDMI.runs/impl_1/top.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
